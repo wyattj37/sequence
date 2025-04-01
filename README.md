@@ -1,2 +1,8 @@
 # sequence
-sequence playing bot
+The notebook contains code for a bot that plays the board game Sequence. It's not awesome at the game, but with a surprisingly simple algorithm it will win a decent portion of the time. It's meant to be played with the app "Line 'Em Up", as that board is slightly different from the one on the physical game.
+
+To use the program, run all the imports and functiosn and stuff at the top. Once you get to #RUN TO START A NEW GAME, it will prompt you to enter your hand one by one. You need to do so using the same convention as the card_map at the top. IMPORTANTLY for non-jacks, use the version of the card name with "1" at the end. Ex: The ten of clubs would be "10c1", and the king of hearts would be "Kh1". The jacks are "Two-eyed Jack" or "One-Eyed Jack". 
+
+From there, you can run the next cell. It will ask if your opponent is going first, to which you respond 'y' or 'n'. From there it will tell you to play a card, ask which card you got in return (which will follow the same convention as before) and then ask what card your opponent played. When it suggests a card to play and when you enter your opponents card, use an appended 1 for the top half of the board and a 2 or bottom half of the board. Ex: your opponent plays the ten of clubs in the bottom right, you enter "10c2".
+
+In the event you need to play a two-eyed jack, it will give you the coordinates in a 0-indexed pair from the top left. So the command to play the two-eyed jack at (1,2) would be 1 down and 2 over. That will only ever happen if you are one away from completing a sequence so it should be straightforward where it is intended.
